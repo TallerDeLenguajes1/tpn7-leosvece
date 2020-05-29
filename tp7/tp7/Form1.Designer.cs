@@ -63,7 +63,7 @@
             this.pantalla.Location = new System.Drawing.Point(30, 26);
             this.pantalla.Name = "pantalla";
             this.pantalla.Size = new System.Drawing.Size(158, 20);
-            this.pantalla.TabIndex = 17;
+            this.pantalla.TabIndex = 0;
             this.pantalla.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // ocho

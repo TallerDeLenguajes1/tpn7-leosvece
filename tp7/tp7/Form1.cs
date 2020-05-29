@@ -13,6 +13,8 @@ namespace tp7
     public partial class Form1 : Form
     {
         Calculadora calcular;
+        bool bandera = true;
+
         public Form1()
         {
             InitializeComponent();
@@ -56,6 +58,7 @@ namespace tp7
 
         private void button13_Click(object sender, EventArgs e)
         {
+
             if (calcular.Resultado == null)
             {
                 calcular.Resultado = pantalla.Text;
@@ -66,7 +69,9 @@ namespace tp7
             {
                 calcular.Dato1 = pantalla.Text;
                 pantalla.Clear();
-                if (calcular.Dato1 != null)
+                calcular.Operador = "/";
+                if (bandera == true)
+                //if (calcular.Dato1 != null)
                 {
                     calcular.Resultado = calcular.calculo(calcular.Resultado, calcular.Operador, calcular.Dato1);
 
@@ -77,20 +82,49 @@ namespace tp7
 
         private void button14_Click(object sender, EventArgs e)
         {
-            if(calcular.Dato1 != null)
-            {
-                calcular.Dato1 = pantalla.Text;
-                calcular.Resultado = calcular.calculo(calcular.Resultado, calcular.Operador, calcular.Dato1);
-                calcular.Dato1 = null;
-                pantalla.Text = calcular.Resultado;
-            }
-            else 
-            //  pantalla.Text.Contains("+");
+
+            if (pantalla.Text.Contains('+'))
             {
 
-                string[] arreglo = pantalla.Text.Split(Convert.ToChar("+"));
-                calcular.calculo(arreglo[0], "+", arreglo[1]);
+                string[] arreglo = pantalla.Text.Split('+');
+                pantalla.Text = calcular.calculo(arreglo[0], "+", arreglo[1]);
             }
+            if (pantalla.Text.Contains('-'))
+            {
+
+                string[] arreglo = pantalla.Text.Split('-');
+                pantalla.Text = calcular.calculo(arreglo[0], "-", arreglo[1]);
+            }
+            if (pantalla.Text.Contains('/'))
+            {
+
+                string[] arreglo = pantalla.Text.Split('/');
+                pantalla.Text = calcular.calculo(arreglo[0], "/", arreglo[1]);
+            }
+            if (pantalla.Text.Contains('*'))
+            {
+
+                string[] arreglo = pantalla.Text.Split('*');
+                pantalla.Text = calcular.calculo(arreglo[0], "*", arreglo[1]);
+            }
+
+            if (bandera == false)
+            {
+                calcular.Dato1 = pantalla.Text;
+                if (calcular.Dato1 == "0" && calcular.Operador == "/")
+                {
+                    pantalla.Text = "ERROR";
+                }
+                pantalla.Text = calcular.calculo(calcular.Resultado, calcular.Operador, calcular.Dato1);
+                calcular.Dato1 = null;
+                calcular = new Calculadora();
+            }
+
+
+            bandera = false;
+ 
+
+            
         }
 
         private void button15_Click(object sender, EventArgs e)
@@ -117,6 +151,7 @@ namespace tp7
             {
                 calcular.Dato1 = pantalla.Text;
                 pantalla.Clear();
+                calcular.Operador = "*";
                 if (calcular.Dato1 != null)
                 {
                     calcular.Resultado = calcular.calculo(calcular.Resultado, calcular.Operador, calcular.Dato1);
@@ -156,7 +191,9 @@ namespace tp7
             {
                 calcular.Dato1 = pantalla.Text;
                 pantalla.Clear();
-                if (calcular.Dato1 != null)
+                calcular.Operador = "-";
+                if (bandera == true)
+                //if (calcular.Dato1 != null)
                 {
                     calcular.Resultado = calcular.calculo(calcular.Resultado, calcular.Operador, calcular.Dato1);
 
@@ -173,6 +210,7 @@ namespace tp7
 
         private void button4_Click(object sender, EventArgs e)
         {
+            
             if (calcular.Resultado == null)
             {
                 calcular.Resultado = pantalla.Text;
@@ -180,14 +218,19 @@ namespace tp7
                 pantalla.Clear();
             }
             else
-            {
+            { 
+              
                 calcular.Dato1 = pantalla.Text;
                 pantalla.Clear();
-                if(calcular.Dato1 != null)
+                calcular.Operador = "+";
+                if(bandera == true)
+                //if (calcular.Dato1 != null)
                 {
-                    calcular.Resultado = calcular.calculo(calcular.Resultado, calcular.Operador, calcular.Dato1);
+                     //calcular.Dato1 = "0";
+                     calcular.Resultado = calcular.calculo(calcular.Resultado, calcular.Operador, calcular.Dato1);
 
                 }
+                bandera = true;
                 //calcular.Dato1 = null;
             }
 

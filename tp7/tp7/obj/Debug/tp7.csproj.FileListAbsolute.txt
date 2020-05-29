@@ -8,3 +8,13 @@ C:\taller y lenguaje\tp7\tpn7-leosvece\tp7\tp7\tp7\obj\Debug\tp7.csproj.CoreComp
 C:\taller y lenguaje\tp7\tpn7-leosvece\tp7\tp7\tp7\obj\Debug\tp7.exe
 C:\taller y lenguaje\tp7\tpn7-leosvece\tp7\tp7\tp7\obj\Debug\tp7.pdb
 C:\taller y lenguaje\tp7\tpn7-leosvece\tp7\tp7\tp7\obj\Debug\tp7.Form1.resources
+C:\taller y lenguaje\tp7\tpn7-leosvece\tp7\tp7\bin\Debug\tp7.exe.config
+C:\taller y lenguaje\tp7\tpn7-leosvece\tp7\tp7\bin\Debug\tp7.exe
+C:\taller y lenguaje\tp7\tpn7-leosvece\tp7\tp7\bin\Debug\tp7.pdb
+C:\taller y lenguaje\tp7\tpn7-leosvece\tp7\tp7\obj\Debug\tp7.csprojAssemblyReference.cache
+C:\taller y lenguaje\tp7\tpn7-leosvece\tp7\tp7\obj\Debug\tp7.Form1.resources
+C:\taller y lenguaje\tp7\tpn7-leosvece\tp7\tp7\obj\Debug\tp7.Properties.Resources.resources
+C:\taller y lenguaje\tp7\tpn7-leosvece\tp7\tp7\obj\Debug\tp7.csproj.GenerateResource.cache
+C:\taller y lenguaje\tp7\tpn7-leosvece\tp7\tp7\obj\Debug\tp7.csproj.CoreCompileInputs.cache
+C:\taller y lenguaje\tp7\tpn7-leosvece\tp7\tp7\obj\Debug\tp7.exe
+C:\taller y lenguaje\tp7\tpn7-leosvece\tp7\tp7\obj\Debug\tp7.pdb
